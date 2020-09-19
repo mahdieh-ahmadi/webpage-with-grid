@@ -1,0 +1,135 @@
+.signup{
+    padding: 15rem 25rem;
+    background-image: linear-gradient(to right bottom,$color-primary-light,$color-primary-dark);
+
+    &__list{
+        height: 40rem;
+        width: 100%;
+        background-image:linear-gradient(105deg,rgba($color-white,.9) 0%,rgba($color-white,0.9) 50%,transparent 50%), url(../img/img20.jpg);
+        background-size: cover;
+        background-position: center;
+        position: relative;
+    }
+
+    &__box--heder{
+        width: 100%;
+        font-size: 1.7rem;
+        
+    }
+
+    &__header{
+        position: absolute;
+        top: 5rem;
+        left: 19rem;
+    }
+
+    &__input{
+        width: 100%;
+        position: absolute;
+        top: 12rem;
+        left: 5rem;
+
+        &--box{
+            position: relative;
+
+            & > *:not(:first-child){
+                margin-left: 1.5rem;
+                position: absolute;
+                top: 3.6rem;
+                opacity: 1;
+                transition: all 0.2s;
+            }
+
+            &-item{
+                width: 38%;
+                display: block;
+                font-size: 1.5rem;
+                padding: 0.8rem 1.5rem;
+                border: none;
+                outline: none;
+
+                &:placeholder-shown + label{
+                    top: 1rem;
+                    opacity: 0;
+                }
+                
+
+                &::-webkit-input-placeholder{
+                    font-size: 1.5rem;
+                    color: $color-gray-light-2;
+                }
+                
+                &:valid:focus{
+                    border-bottom: 2px solid $color-primary-dark; 
+                }
+
+                &:invalid:focus{
+                    border-bottom: 2px solid red;  
+                }
+            }
+        }
+
+        &--radio{
+            margin-top: 3rem;
+
+            &-box{
+                display: inline-block;
+
+                &:not(:first-child){
+                    margin-left: 2.5rem;
+                }
+               
+            }
+
+            &-btn{
+                position: relative;
+                display: none;
+
+               & + label{
+                   padding-left: 3.5rem;
+                   font-size: 1.4rem;
+                   position: relative;
+
+                   span{
+                    position: absolute;
+                    top: -1rem;
+                    left: 0;
+                    width: 3rem;
+                    height: 3rem;
+                    border: 5px solid $color-primary-dark;
+                    border-radius: 50%;
+                    padding: 0.5rem;
+                   }
+
+                   span::after{
+                       content: '';
+                       position: absolute;
+                       top: 0.25rem;
+                       left: 0.25rem;
+                       width: 1.5rem;
+                       height: 1.5rem;
+                       background-color: transparent;
+                       border-radius: 50%;
+                   }
+               }
+
+                
+
+                &:checked ~ label span::after{
+                    background-color: $color-primary-dark;
+                }
+               
+                
+                &:not(:first-child){
+                    margin-left: 5rem;
+                }
+            }
+        }
+
+        &--btn{
+            margin-top: 4rem;
+        }
+
+    
+    }
+}

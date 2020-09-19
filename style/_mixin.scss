@@ -1,0 +1,37 @@
+@mixin bgTransparent {
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+@mixin center {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
+
+@mixin clearfix {
+    &::after{
+        content: '';
+        clear: both;
+        display: table;
+    }
+}
+
+@mixin response($input) {
+    @if $input==phone{
+        @media only screen and (max-width:600px){@content};
+    }
+
+    @if $input==tab-port{
+        @media only screen and (max-width:900px){@content};
+    }
+
+    @if $input==tab-landscape{
+        @media only screen and (max-width:1200px){@content};
+    }
+
+    @if $input==largdesktop{
+        @media only screen and (min-width:1800px){@content};
+    }
+}

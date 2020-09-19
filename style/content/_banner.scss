@@ -1,0 +1,37 @@
+.banner{
+    background-image: linear-gradient(to right bottom,rgba($color-primary-light,0.85) ,rgba($color-primary-dark,0.85)),url(../img/img32.jpg);
+    background-size: cover;
+    background-position: center;
+    transform: skewy(-10deg);
+    padding: 15rem 15rem;
+    margin-top: -15rem;
+    text-align: center;
+    
+
+    &__item{
+        background-color: $color-gray-light-2;
+        padding: 3rem 1.5rem;
+        transition: all .2s;
+
+        &-paragraph{
+            font-size: 1.3rem;
+            padding: 0 1.5rem;
+        }
+
+        &:hover{
+            transform: scale(1.1);
+        }
+    }
+    
+
+    &__content{
+        transform: skewy(10deg);
+    }
+
+    &__item-icon{
+        font-size: 6rem;
+        background-image: linear-gradient(to right,$color-primary-light,$color-primary-dark);
+        @include bgTransparent;
+        padding: 2rem 0;
+    }
+}

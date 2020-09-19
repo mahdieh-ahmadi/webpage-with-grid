@@ -1,0 +1,65 @@
+.row{
+margin: 0 auto;
+width: 100%;
+/* background-color: yellowgreen; */
+
+&:not(:last-child){
+    margin-bottom: 1rem;  
+}
+
+@include clearfix;
+
+.col_1_2{
+    width: calc( ( 100% - #{$margin-left} ) / 2 );
+    float: left;
+    position: relative;
+  /*   background-color: yellow; */
+
+    &:not(:first-child){
+        margin-left: 3rem;
+    }
+}
+
+.col_1_3{
+    width: calc( ( 100% - 2*#{$margin-left} ) / 3 );
+    float: left;
+   /*  background-color: rgb(218, 142, 2); */
+
+    &:not(:first-child){
+        margin-left: 3rem;
+    }
+}
+
+.col_2_3{
+    width: calc( 2 * (( 100% - 2*#{$margin-left} ) / 3 ) + #{$margin-left});
+    float: left;
+   /*  background-color: rgb(218, 142, 2); */
+    margin-left: 3rem;
+}
+
+.col_1_4{
+    width: calc( ( 100% - 3*#{$margin-left} ) / 4 );
+    float: left;
+    /* background-color: rgb(2, 218, 135); */
+
+    &:not(:first-child){
+        margin-left: 3rem;
+    }
+}
+
+.col_2_4{
+    width: calc( 2 * (( 100% - 3*#{$margin-left} ) / 4 ) + #{$margin-left});
+    float: left;
+  /*   background-color: rgb(2, 168, 218); */
+    margin-left: 3rem;  
+}
+
+.col_3_4{
+    width: calc( 3 * (( 100% - 3*#{$margin-left} ) / 4 ) + 2*#{$margin-left});
+    float: left;
+   /*  background-color: rgb(2, 34, 218); */
+    margin-left: 3rem;  
+}
+}
+
+
